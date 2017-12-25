@@ -1,0 +1,48 @@
+struct Point_t
+{
+	int32_t x;
+	int32_t y;
+}
+
+struct TrafficSignalElement_t
+{
+	byte sampleType;
+	byte eShape;
+	byte eColor;
+	byte sPointNum;
+	byte eKeepOut;
+	Point_t objpPointPts[5];
+	Point_t objTextPts[2];
+	byte ucDrawMode;
+	byte ucMinFlag;
+	
+	METGPSInfo_Lcm objMETGPSInfo_Lcm;
+}
+
+struct TrafficSignalQueue_t
+{
+	byte	 active;
+	int32_t  num_ranges;
+        int16_t  trafficsign_id;
+
+	Point_t  objPointLongmen[4];
+
+	TrafficSignalElement_t  TraSignalElement[10];
+}
+
+struct TrafficSignalTable_t
+{
+	TrafficSignalQueue_t queue[64];
+}
+
+struct UpdateSignal_t
+{
+	byte	 needupdate[64];
+	int32_t  nId[64];
+}
+
+struct ControlCmd_t
+{
+	HEADER header;
+	byte control_cmd;//1播放 2暂停 3下一帧 4上一帧 5跳转到指定的时间戳
+}

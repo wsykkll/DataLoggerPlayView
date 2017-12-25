@@ -1,0 +1,29 @@
+﻿Build started 2017/12/24 19:27:33.
+     1>Project "D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\app_viewer\app_viewer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\wsy\OpenCV-2.1.0\build\include" /I"C:\msys32\mingw32\lib\glib-2.0\include" /I"C:\msys32\mingw32\include\glib-2.0" /I"D:\cmake\libQGLViewer-2.6.3\QGLViewer" /I"C:\Program Files (x86)\lcm\include" /ID:\cmake\boost_1_60_0 /I..\header_msg /I.\GeneratedFiles /I. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtGui /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtOpenGL /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtWidgets /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtXml /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /D QT_XML_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DrawVehInfo.cpp
+         DrawVehInfo.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Debug\\app_viewer.exe" /NOLOGO /LIBPATH:.\tinyxml /LIBPATH:.\CoordinateTrans /LIBPATH:.\libjpeg /LIBPATH:"D:\wsy\OpenCV-2.1.0\build\lib" /LIBPATH:D:\cmake\boost_1_60_0\stage\lib /LIBPATH:"C:\Program Files (x86)\lcm\lib" /LIBPATH:"C:\Program Files (x86)\lcm\bin" /LIBPATH:D:\Qt\Qt5.5.1\5.5\msvc2013\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Widgetsd.lib Qt5Xmld.lib lib3ds.lib "C:\msys32\mingw32\lib\libglib-2.0.dll.a" cv210d.lib cxcore210d.lib highgui210d.lib QGLViewerd2.lib lcm.lib libjpeg.lib CoordinateTrans.lib tinyxml2d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Debug\app_viewer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Debug\app_viewer.lib" /MACHINE:X86 /SAFESEH Debug\cqglviewer.obj
+         Debug\DrawCamera.obj
+         Debug\DrawCoordinates.obj
+         Debug\DrawElement.obj
+         Debug\DrawMWR.obj
+         Debug\DrawPrescanLines.obj
+         Debug\DrawVehInfo.obj
+         Debug\moc_mainwindow.obj
+         Debug\qrc_mainwindow.obj
+         Debug\INSDrawer.obj
+         Debug\LCMHandler.obj
+         Debug\LCMSubscriber.obj
+         Debug\main.obj
+         Debug\mainwindow.obj
+         Debug\MapGraph.obj
+         Debug\TransformListener.obj
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         app_viewer.vcxproj -> D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Debug\app_viewer.exe
+     1>Done Building Project "D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\app_viewer\app_viewer.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.63

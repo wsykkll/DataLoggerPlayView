@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1164</width>
+    <height>802</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Autonomous Driving - Viewer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="CQGLViewer" name="widgetQGLViewer" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="100">
+            <red>227</red>
+            <green>227</green>
+            <blue>227</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="100">
+            <red>227</red>
+            <green>227</green>
+            <blue>227</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="100">
+            <red>227</red>
+            <green>227</green>
+            <blue>227</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="100">
+            <red>227</red>
+            <green>227</green>
+            <blue>227</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1164</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuRawSensor">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>RawSensor</string>
+    </property>
+    <widget class="QMenu" name="menuMWR">
+     <property name="title">
+      <string>MWR</string>
+     </property>
+     <widget class="QMenu" name="menuFront">
+      <property name="title">
+       <string>Front</string>
+      </property>
+      <addaction name="action_ESRNewTarget"/>
+      <addaction name="action_ESRNewUpdatedTarget"/>
+      <addaction name="action_ESRUpdatedTarget"/>
+      <addaction name="action_ESRCoastedTarget"/>
+     </widget>
+     <addaction name="menuFront"/>
+     <addaction name="actionLeft_SRR"/>
+     <addaction name="actionRight_SRR"/>
+    </widget>
+    <widget class="QMenu" name="menuVCU">
+     <property name="title">
+      <string>VCU</string>
+     </property>
+     <addaction name="actionVCU550"/>
+    </widget>
+    <widget class="QMenu" name="menuPRESCAN">
+     <property name="title">
+      <string>PRESCAN</string>
+     </property>
+     <addaction name="actionPrescanLanes"/>
+     <addaction name="actionPrescanPos"/>
+     <addaction name="actionMapLanes"/>
+    </widget>
+    <widget class="QMenu" name="menuLaneLines">
+     <property name="title">
+      <string>LaneLines</string>
+     </property>
+     <addaction name="actionDetectedLanelinesMark"/>
+     <addaction name="actionMapLanelinesMark"/>
+     <addaction name="actionMapLanelinesProcess"/>
+     <addaction name="actionMapLanelinesCalibration"/>
+    </widget>
+    <widget class="QMenu" name="menuTrafficSign">
+     <property name="title">
+      <string>TrafficSign</string>
+     </property>
+     <addaction name="actionDetectedTrafficSign"/>
+     <addaction name="actionMapTrafficSign"/>
+    </widget>
+    <addaction name="actionImage"/>
+    <addaction name="menuMWR"/>
+    <addaction name="actionINS"/>
+    <addaction name="menuVCU"/>
+    <addaction name="menuPRESCAN"/>
+    <addaction name="menuLaneLines"/>
+    <addaction name="menuTrafficSign"/>
+   </widget>
+   <widget class="QMenu" name="menuPreprocessing">
+    <property name="title">
+     <string>Preprocessing</string>
+    </property>
+    <widget class="QMenu" name="menuMWR_2">
+     <property name="title">
+      <string>MWR</string>
+     </property>
+     <widget class="QMenu" name="menuFrontMWR">
+      <property name="title">
+       <string>FrontMWR</string>
+      </property>
+      <addaction name="actionACC"/>
+      <addaction name="actionFCW"/>
+     </widget>
+     <addaction name="menuFrontMWR"/>
+     <addaction name="actionLeftSRRFiltered"/>
+     <addaction name="actionRightSRRFiltered"/>
+    </widget>
+    <addaction name="menuMWR_2"/>
+   </widget>
+   <widget class="QMenu" name="menuMiscellaneous">
+    <property name="title">
+     <string>Miscellaneous</string>
+    </property>
+    <widget class="QMenu" name="menuCoordinates">
+     <property name="title">
+      <string>Coordinates</string>
+     </property>
+     <addaction name="actionLineBwtweenCoordinate"/>
+     <addaction name="actionWorldCoordinate"/>
+     <addaction name="actionVehicleCoordinate"/>
+     <addaction name="actionCameraCoordinate"/>
+     <addaction name="actionESRCoordinate"/>
+     <addaction name="actionLeftSRRCoordinate"/>
+     <addaction name="actionRightSRRCoordinate"/>
+    </widget>
+    <addaction name="menuCoordinates"/>
+    <addaction name="actionVehicle_Model"/>
+    <addaction name="actionSquareGrids"/>
+    <addaction name="actionRadical_Grids"/>
+   </widget>
+   <widget class="QMenu" name="menuLaneMatch">
+    <property name="title">
+     <string>LaneMatch</string>
+    </property>
+    <addaction name="actionLane_1"/>
+    <addaction name="actionLane_2"/>
+    <addaction name="actionLane_3"/>
+    <addaction name="actionLane_4"/>
+   </widget>
+   <addaction name="menuRawSensor"/>
+   <addaction name="menuPreprocessing"/>
+   <addaction name="menuMiscellaneous"/>
+   <addaction name="menuLaneMatch"/>
+  </widget>
+  <action name="actionImage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Image</string>
+   </property>
+  </action>
+  <action name="actionLeft_SRR">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actionRight_SRR">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionVCU550">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>VCU550</string>
+   </property>
+  </action>
+  <action name="actionVehicle_Model">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vehicle Model</string>
+   </property>
+  </action>
+  <action name="actionINS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>INS</string>
+   </property>
+  </action>
+  <action name="actionSquareGrids">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Square_Grids</string>
+   </property>
+  </action>
+  <action name="actionRadical_Grids">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Radical_Grids</string>
+   </property>
+  </action>
+  <action name="actionWorldCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>World</string>
+   </property>
+  </action>
+  <action name="actionVehicleCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vehicle</string>
+   </property>
+  </action>
+  <action name="actionCameraCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Camera</string>
+   </property>
+  </action>
+  <action name="actionESRCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ESR</string>
+   </property>
+  </action>
+  <action name="actionLeftSRRCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>LeftSRR</string>
+   </property>
+  </action>
+  <action name="actionRightSRRCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>RightSRR</string>
+   </property>
+  </action>
+  <action name="actionLeftSRRFiltered">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>LeftSRR</string>
+   </property>
+  </action>
+  <action name="actionRightSRRFiltered">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>RightSRR</string>
+   </property>
+  </action>
+  <action name="actionPrescanLanes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>PrescanLanes</string>
+   </property>
+  </action>
+  <action name="actionPrescanPos">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>PrescanPos</string>
+   </property>
+  </action>
+  <action name="actionMapLanes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>MapLanes</string>
+   </property>
+  </action>
+  <action name="actionDetectedLanelinesMark">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>DetectedLanelinesMark</string>
+   </property>
+  </action>
+  <action name="actionMapLanelinesMark">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>MapLanelinesMark</string>
+   </property>
+  </action>
+  <action name="actionDetectedTrafficSign">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>DetectedTrafficSign</string>
+   </property>
+  </action>
+  <action name="actionMapTrafficSign">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>MapTrafficSign</string>
+   </property>
+  </action>
+  <action name="actionLineBwtweenCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>LineBwtweenCoordinate</string>
+   </property>
+  </action>
+  <action name="actionLane_1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Lane_1</string>
+   </property>
+  </action>
+  <action name="actionLane_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Lane_2</string>
+   </property>
+  </action>
+  <action name="actionLane_3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Lane_3</string>
+   </property>
+  </action>
+  <action name="actionLane_4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Lane_4</string>
+   </property>
+  </action>
+  <action name="actionMapLanelinesProcess">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>MapLanelinesProcess</string>
+   </property>
+  </action>
+  <action name="actionMapLanelinesCalibration">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>MapLanelinesCalibration</string>
+   </property>
+  </action>
+  <action name="actionACC">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ACC</string>
+   </property>
+  </action>
+  <action name="actionFCW">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>FCW</string>
+   </property>
+  </action>
+  <action name="action_ESRNewTarget">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="action_ESRNewUpdatedTarget">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>NewUpdated</string>
+   </property>
+  </action>
+  <action name="action_ESRUpdatedTarget">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Updated</string>
+   </property>
+  </action>
+  <action name="action_ESRCoastedTarget">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Coasted</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CQGLViewer</class>
+   <extends>QWidget</extends>
+   <header>cqglviewer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

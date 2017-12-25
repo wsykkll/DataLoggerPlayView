@@ -1,0 +1,7 @@
+struct POSTURE
+{
+	int64_t nTimeStamp;
+	double dLatitude;
+	double dLongitude;
+	double dHeading;
+}

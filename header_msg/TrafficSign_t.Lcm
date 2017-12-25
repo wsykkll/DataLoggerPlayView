@@ -1,0 +1,18 @@
+struct TSRCALIBRATION
+{
+	int16_t iTSRNum;
+	TSRInfo stTSRInfo[64];
+}
+
+struct TSRInfo
+{
+	byte bActive;
+	double flx;
+	double fly;
+	double frx;
+	double fry;
+	float fwidth;
+	float fheight;
+	float fHeight_;
+	float ftheta;
+}

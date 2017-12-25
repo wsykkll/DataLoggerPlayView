@@ -1,0 +1,13 @@
+struct METRTK_MSG
+{
+    double     dLatitude;//纬度值(-90~90度)
+    uint8_t    cLatdir;//纬度方向，N:北 S:南
+    double     dLonitude; //经度值(-180~180度)
+    uint8_t    cLondir; //经度方向 E:东 W:西
+    int64_t    nQF; //解状态 0:无效解 1:单点定位解 2:伪距差分 4:固定解 5:浮动解 6:惯导解
+    int64_t    nSatNo; //卫星数目
+    double     dwAltitude; //海拔高程，单位：米
+    double     dHeading;//方向角，0~360度，正北向位0度，顺时针增加
+    double     dPitch;//俯仰角，-90~90度
+    double     dRoll;//横滚角，-90~90度
+};

@@ -1,0 +1,12 @@
+struct VehiclePosture
+{
+	HEADER stheader;
+	double dInitLatitude;
+	double dInitLongitude;
+	double local_x;
+	double local_y;
+	double dLatitude;
+	double dLongitude;
+	double dHeading;
+	double dSpeed;
+}

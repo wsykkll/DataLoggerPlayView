@@ -1,0 +1,18 @@
+﻿Build started 2017/11/15 19:50:14.
+     1>Project "D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\app_player\app_player.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\header_msg /I"C:\msys32\mingw32\lib\glib-2.0\include" /I"C:\msys32\mingw32\include\glib-2.0" /ID:\cmake\boost_1_60_0 /I"C:\Program Files (x86)\lcm\include" /I.\GeneratedFiles /I. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Release /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtGui /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtWidgets /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cplayerthread.cpp
+         cplayerthread.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Release\\app_player.exe" /NOLOGO /LIBPATH:"C:\Program Files (x86)\lcm\bin" /LIBPATH:"C:\Program Files (x86)\lcm\lib" /LIBPATH:D:\cmake\boost_1_60_0\stage\lib /LIBPATH:D:\Qt\Qt5.5.1\5.5\msvc2013\lib qtmain.lib Qt5Core.lib Qt5Gui.lib Qt5Widgets.lib "C:\msys32\mingw32\lib\libglib-2.0.dll.a" lcm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Release\app_player.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Release\app_player.lib" /MACHINE:X86 /SAFESEH Release\cplayerthread.obj
+         Release\qrc_mainwindow.obj
+         Release\moc_cplayerthread.obj
+         Release\moc_mainwindow.obj
+         Release\main.obj
+         Release\mainwindow.obj
+         app_player.vcxproj -> D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\Win32\Release\app_player.exe
+     1>Done Building Project "D:\BackUp\Visual Studio 2013\Projects\Data_LoggerReplayView\app_player\app_player.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.87

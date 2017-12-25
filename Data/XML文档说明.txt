@@ -1,0 +1,88 @@
+<Road Id="1" SectionAmount="2">
+id		Road的Id
+
+SectionAmount	Road包含的Section数量
+
+<Section Id="1" LaneLineAmount="4" LaneAmount="3">
+id 		Section的Id
+
+LaneLineAmount 	车道线的数量	
+
+LaneAmount	车道的数量
+
+<Line UniqueId="2" TypePosSet="1" TypeLanLine="2" TypeIntSec="1" RoadId="0" SectionId="0" EdgeId="1" Color="5" PointNum="5" Direction="0" InRoadId="0" InSectionId="0" InLaneId="0" OutRoadId="0" OutSectionId="0" OutLaneId="0">
+UniqueId	线的Id
+
+TypePosSet //线的类型
+0,//未知
+1,//车道线
+2,//停止线
+3,//斑马线
+4,//路口
+
+TypeLanLine//车道线的类型
+0,//未知
+1,//单实线
+2,//单虚线
+3,//双实线
+4,//双线(左实右虚)
+5,//双线(左虚右实)
+6 //虚拟线
+
+TypeIntSec//路口的类型
+0,//未知
+1,//十字路口
+2,//T形路口
+3 //Y形路口
+
+RoadId//线所属的RoadId
+SectionId//线所属的SectionId
+EdgeId//线的EdgeId
+Color//线的颜色
+PointNum//线的点数
+Direction//线的方向(虚拟车道线)
+0,//未知
+1,//直行
+2,//左转
+3,//右转
+4,//掉头
+
+InRoadId	//虚拟车道线/停止线/斑马线 对应的驶入RoadId
+InSectionId	//虚拟车道线/停止线/斑马线 对应的驶入SectionId
+InLaneId	//虚拟车道线/停止线/斑马线 对应的驶入LaneId
+OutRoadId	//虚拟车道线 对应的驶出RoadId
+OutSectionId	//虚拟车道线 对应的驶出SectionId
+OutLaneId	//虚拟车道线 对应的驶出LaneId
+
+<Point Id="1" Lat="31.2043281473" Lon="121.6208328888"/>
+Id	点的Id
+Lat	点的纬度
+Lon	点的经度
+
+<Lane Id="1" Diversion="3"/>
+Id		车道的Id
+Diversion	导流的信息
+0,//未知
+1//掉头
+2,//左转
+3,//直行+左转
+4,//左转+掉头
+5,//直行+左转+掉头
+6,//直行
+7,//直行+右转
+8//右转
+
+<InterSection Id="1" InRoadId_00="1" OutRoadId_00="2" OutRoadId_01="3">//路口
+Id		路口的Id
+InRoadId_00	路口的驶入路Id
+OutRoadId_00	路口的驶出路Id
+OutRoadId_01	路口的驶出路Id
+
+<OutLine LineAmount="1">//路口的轮廓
+LineAmount	线的数量
+
+<ZebraLine LineAmount="2">//路口的斑马线
+
+<VirtualLaneLine LineAmount="12">//路口的虚拟车道线
+
+<StopLine LineAmount="1">//路口的停止线
